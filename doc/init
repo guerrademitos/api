@@ -1,0 +1,22 @@
+{
+  "apiVersion": null,
+  "swaggerVersion": "1.2",
+  "basePath": "http://205.251.133.194/~guerrade/api",
+  "resourcePath": "/init",
+  "produces": [
+    "application/json"
+  ],
+  "apis": [
+  	{
+      "path": "/init",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get initial information",
+          "notes": "Returns information related to mythologies, expansions and keywords.",
+          "nickname": "init"
+        }
+      ]
+    }
+  ]
+}

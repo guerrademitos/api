@@ -1,0 +1,15 @@
+{
+  "apiVersion": "0.1",
+  "basePath": "http://205.251.133.194/~guerrade/api/doc",
+  "swaggerVersion": "1.2",
+  "apis": [
+    {
+      "path": "/init",
+      "description": "Initial operations"
+    },
+    {
+      "path": "/cards",
+      "description": "Getting cards info"
+    }
+  ]
+}
