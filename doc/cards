@@ -48,6 +48,82 @@
           ]
         }
       ]
+    },
+    {
+      "path": "/cards/orderby/{field}/{direction}",
+	  "operations": [
+        {
+          "method": "GET",
+          "summary": "Get all cards ordered by field",
+          "notes": "Get all cards, ordered by field and direction",
+          "responseClass": "Card",
+          "nickname": "getCardsWithOrder",
+          "parameters": [
+            {
+              "name": "field",
+              "description": "Field to order the results (default - name)",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "direction",
+              "description": "Direction of the order (default - ASC)",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/cards/orderby/{field}/{direction}/{limit}/{offset}",
+	  "operations": [
+        {
+          "method": "GET",
+          "summary": "Get all cards ordered with pager",
+          "notes": "Get all cards, ordered by field and direction, using a pager. Direction field is mandatory.",
+          "responseClass": "Card",
+          "nickname": "getCardsWithOrderAndPager",
+          "parameters": [
+            {
+              "name": "field",
+              "description": "Field to order the results (default - name)",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "direction",
+              "description": "Direction of the order (default - ASC)",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "limit",
+              "description": "Return limit, aka page size (default - 10)",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "integer",
+              "paramType": "path"
+            },
+            {
+              "name": "offset",
+              "description": "Return offset, aka page num (default - 0)",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "integer",
+              "paramType": "path"
+            }
+          ]
+        }
+      ]
     }
   ],
   "models": {
